@@ -23,17 +23,6 @@ public class TaskController {
 
     }
 
-    /*
-    * Нужно реализовать такие ресты:
-
-    (GET) /tasks - Список всех задач
-    (GET) /tasks/{id} - Задача по id. Пример /tasks/1
-    (PUT) /tasks/{id} - Редактирование задачи
-    (DELETE) /tasks/{id} - Удаление задачи
-
-    Будут использованы аннотации: @GetMapping, @PutMapping, @PathVariable, @RequestBody
-    */
-
     @GetMapping("/tasks/{id}")
     public Task getTaskById (@PathVariable Long id){
         return taskRepository.findById(id);
